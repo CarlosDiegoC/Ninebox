@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
-const GRAPH_ENDPOINT = 'https://api.adviceslip.com/advice';
+const ADVICE_ENDPOINT = 'https://api.adviceslip.com/advice';
 
 type Slip = {
   id?: number,
@@ -24,7 +24,7 @@ export class AdvicesComponent implements OnInit {
   }
 
   getAdvice() {
-    this.http.get(GRAPH_ENDPOINT)
+    this.http.get(ADVICE_ENDPOINT)
       .subscribe(advice => {
         this.advice = Object.values(advice)[0];
       });

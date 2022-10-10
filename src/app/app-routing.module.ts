@@ -5,6 +5,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { MsalGuard } from '@azure/msal-angular';
 import { AdvicesComponent } from './advices/advices.component';
 import { RoleGuardService } from './role-guard.service';
+import { ProductsComponent } from './products/products.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,14 @@ const routes: Routes = [
     canActivate: [MsalGuard, RoleGuardService],
     data: {
       expectedRole: 'User.Gestor'
+    }
+  },
+  {
+    path: 'products',
+    component: ProductsComponent,
+    canActivate: [MsalGuard, RoleGuardService],
+    data: {
+      expectedRole: 'User.Admin'
     }
   },
   {

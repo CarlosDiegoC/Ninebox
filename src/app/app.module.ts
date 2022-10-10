@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-import { HTTP_INTERCEPTORS, HttpClientModule } from "@angular/common/http"; // Import
+import { HTTP_INTERCEPTORS, HttpClientModule } from "@angular/common/http";
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -12,9 +12,11 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile.component';
 
-import { MsalModule, MsalRedirectComponent, MsalGuard, MsalInterceptor } from '@azure/msal-angular'; // Import MsalInterceptor
+import { MsalModule, MsalRedirectComponent, MsalGuard, MsalInterceptor } from '@azure/msal-angular';
 import { InteractionType, PublicClientApplication } from '@azure/msal-browser';
 import { AdvicesComponent } from './advices/advices.component';
+import { ProductsComponent } from './products/products.component';
+import { AuthInterceptor } from './auth-interceptor';
 
 const isIE = window.navigator.userAgent.indexOf('MSIE ') > -1 || window.navigator.userAgent.indexOf('Trident/') > -1;
 
@@ -23,7 +25,8 @@ const isIE = window.navigator.userAgent.indexOf('MSIE ') > -1 || window.navigato
     AppComponent,
     HomeComponent,
     ProfileComponent,
-    AdvicesComponent
+    AdvicesComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,
@@ -51,9 +54,10 @@ const isIE = window.navigator.userAgent.indexOf('MSIE ') > -1 || window.navigato
         }
     },
     {
-      interactionType: InteractionType.Redirect, // MSAL Interceptor Configuration
+      interactionType: InteractionType.Redirect,
       protectedResourceMap: new Map([
-        ['https://graph.microsoft.com/v1.0/me', ['user.read']]
+        ['https://graph.microsoft.com/v1.0/me', ['user.read']],
+        ['https://apim-shoescompany-0001.azure-api.net/census/api/Census', null],
       ])
     })
   ],
@@ -61,6 +65,11 @@ const isIE = window.navigator.userAgent.indexOf('MSIE ') > -1 || window.navigato
     {
       provide: HTTP_INTERCEPTORS,
       useClass: MsalInterceptor,
+      multi: true
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
       multi: true
     },
     MsalGuard

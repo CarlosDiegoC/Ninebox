@@ -4,6 +4,7 @@ import { MsalService } from "@azure/msal-angular";
 import { AccountInfo } from "@azure/msal-browser";
 
 interface Account extends AccountInfo {
+  idToken?: string
   idTokenClaims?: {
     roles?: string[]
   }
@@ -28,9 +29,6 @@ export class RoleGuardService implements CanActivate {
       window.alert('Você não tem acesso a esta funcionalidade. Esse recurso não será renderizado na tela caso a role não tenha acesso a ele, está aqui como ilustração de proteção da rota.');
       return false;
     }
-
-    console.log(account.idTokenClaims?.roles)
-
     return true;
   }
 }
