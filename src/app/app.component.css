@@ -5,3 +5,20 @@
 a.title {
   color: white;
 }
+.toolbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0097D9;
+  width: auto;
+  height: 16.34mm;
+  padding: 5.44mm;
+}
+
+.toolbar__logo{
+  display: flex;
+  justify-content: absolute;
+}
+.toolbar__imagem{
+  width: 30mm;
+}

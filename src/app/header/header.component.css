@@ -1,0 +1,51 @@
+
+.toolbar__logo{
+  display: flex;
+  justify-content: absolute;
+  padding: 18mm;
+  
+}
+.toolbar__imagem{
+  width: 68mm;
+}
+
+
+.toobar__logout{
+  position: fixed;
+  right: 120px;
+  top:20px;
+  font-size: 28px
+}
+
+
+
+.valign-center {
+  display: flex;
+  vertical-align: middle;
+  align-items:center;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover, a:active {
+  color: lightgray;
+}
+
+.menu-items {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+mat-toolbar {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0px;
+  z-index: 999;
+}
+.mat-elevation-z10{
+  background-color: #0097D9;
+}
