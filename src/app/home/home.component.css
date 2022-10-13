@@ -1,23 +1,117 @@
 .container {
-  width: 100vw;
+  width: auto;
   height: 100vh;
-  background: #6C7A89;
+  background: #F2F2F2;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
-.box {
+.flex{
+  display:flex;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+  flex-direction:row;
+  background: #F2F2F2;
+  justify-content: flex-start;
+  
+}
+
+.flex > div {
+  margin: 10px;
+  flex-grow: 0;
+}
+.box-0{
+  background: #213E7F;
   width: 250px;
   height: 250px;
-  background: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 5px;
-  margin-right: 5px;
+  box-shadow: 6px 6px 6px  #6C7A89;
+  border-radius: 3px;
 }
+.box-0:hover {
+  border: px solid #6C7A89;
+  transform: scale(1); 
+  box-shadow: 1px 5px 15px rgba(34, 34, 34, 0.6);
+  
+}
+.box-1 {
+  width: 420px;
+  height: 200px;
+  background: #213E7F;
+  box-shadow: 6px 6px 6px  #6C7A89;
+  border-radius: 3px;
+}
+.box-1:hover {
+  border: px solid #6C7A89;
+  transform: scale(1); 
+  box-shadow: 0 5px 15px rgba(0,0,0,0.6);
+}
+.box-2{
+  background: #B2D4F1;
+  width: 200px;
+  height: 200px;
+  box-shadow: 6px 6px 6px  #6C7A89;
+  border-radius: 3px;
+}
+.box-2:hover {
+  border: px solid #6C7A89;
+  transform: scale(1); 
+  box-shadow: 1px 5px 15px rgba(34, 34, 34, 0.6);
+  background-color: #a4cdf0;
+}
+.font-box{
+  color: white;
+  font-family: Arial;
+  font-size: 80px;
+  text-align: center;
+  padding-top: 50%;
+} 
+.font-boxes{
+ color: white;
+ font-family: Arial;
+ font-size: 25px;
+ text-align: left;
+ padding-top: 12px;
+ padding-left: 20px;
+ 
+}
+.font-boxes1{ 
+  color: #0f1f41;
+  font: Arial;
+  font-size: 20px;
+  margin-top: 5px;
+  text-align: left;
+  display: flex;
+  padding-top: 10px;
+  padding-left: 15px;
+}
+.box2 > mat-button{
+  width: 200px;
+  height: 200px;
+}
+
+.icons{
+color: #F2F2F2;
+font-size: 40px;
+display: flex;
+width: auto;
+height: auto;
+padding: 90px 20px;
+justify-content: flex-end;
+}
+
+.icons1{
+  color:#496094;
+  font-size: 40px;
+  display: flex;
+  width: auto;
+  height: auto;
+  padding: 90px 20px;
+  justify-content: flex-end;
+  }
 
 body {
   margin: 0px;
@@ -32,3 +126,7 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+
+
+

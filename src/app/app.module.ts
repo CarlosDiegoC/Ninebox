@@ -17,6 +17,10 @@ import { InteractionType, PublicClientApplication } from '@azure/msal-browser';
 import { AdvicesComponent } from './advices/advices.component';
 import { ProductsComponent } from './products/products.component';
 import { AuthInterceptor } from './auth-interceptor';
+import {MatMenuModule} from '@angular/material/menu';
+import { HeaderComponent } from './header/header.component';
+import {MatIconModule} from '@angular/material/icon';
+
 
 const isIE = window.navigator.userAgent.indexOf('MSIE ') > -1 || window.navigator.userAgent.indexOf('Trident/') > -1;
 
@@ -26,6 +30,7 @@ const isIE = window.navigator.userAgent.indexOf('MSIE ') > -1 || window.navigato
     HomeComponent,
     ProfileComponent,
     AdvicesComponent,
+    HeaderComponent,
     ProductsComponent
   ],
   imports: [
@@ -35,12 +40,15 @@ const isIE = window.navigator.userAgent.indexOf('MSIE ') > -1 || window.navigato
     MatButtonModule,
     MatToolbarModule,
     MatListModule,
+    MatMenuModule,
+    MatIconModule,
     HttpClientModule,
     MsalModule.forRoot( new PublicClientApplication({
       auth: {
         clientId: '8041545d-1c84-4b1b-9ff3-39b0e8076cf2',
         authority: 'https://login.microsoftonline.com/d28ce3ba-a6d5-4bd9-8718-290cb947a6c4',
         redirectUri: 'http://localhost:4200',
+        /* redirectUri: 'https://appnineboxhermesdev.azurewebsites.net/', */
       },
       cache: {
         cacheLocation: 'localStorage',

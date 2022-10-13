@@ -1,16 +1,50 @@
-<div *ngIf="!loginDisplay" class="sign-in">
-  <h1>9Box</h1>
-  <h2>Welcome to GFT Performance Evaluation!</h2>
-  <p>Please sign-in to see your profile information and access the platform.</p>
-</div>
 
-<div *ngIf="loginDisplay">
-  <div class="container">
-    <div *ngIf="isAdmin()"><div class="box"><a mat-button [routerLink]="['profile']">Profile ADMIN</a></div></div>
-    <div class="box"><a mat-button [routerLink]="['advices']">Advices GESTOR</a></div>
-    <div class="box"><a mat-button [routerLink]="['products']">Products</a></div>
-    <div class="box"><a mat-button [routerLink]="">Recurso 04</a></div>
-    <div class="box"><a mat-button [routerLink]="">Recurso 05</a></div>
-    <div class="box"><a mat-button [routerLink]="">Recurso 06</a></div>
-  </div>
-</div>
+ <app-header></app-header>
+ <div class=" container" *ngIf="!loginDisplay" >
+   <section class="flex">
+     <div class="box-0">
+       <p class="font-box">9Box</p>
+     </div>
+   </section>
+  
+ </div>
+ 
+ <router-outlet></router-outlet>
+ 
+ 
+ <div class=" container" *ngIf="loginDisplay">
+   <section class="flex">
+     <div class="box-1" > 
+       <p class= "font-boxes">Dashboard</p>
+       <mat-icon class="icons">dashboard</mat-icon>
+     </div>
+     <div class="box-2">
+       <p class= "font-boxes1">Coraboradores</p>
+       <mat-icon class="icons1">supervisor_account</mat-icon>
+     </div>
+     <div class="box-2">
+       <p class= "font-boxes1">Avaliações</p> 
+       <mat-icon class="icons1">thumb_up</mat-icon>
+     </div>
+     <div class="box-2">
+        <p class= "font-boxes1">Perfil</p> 
+        <mat-icon class="icons1">perm_identity</mat-icon>
+     </div> 
+     <div class="box-2">
+         <p class= "font-boxes1">Habilidades</p>
+         <mat-icon class="icons1">trending_up</mat-icon>
+     </div>
+     <div class="box-2">
+         <p class= "font-boxes1">Competências</p>
+         <mat-icon  class="icons1">star_border</mat-icon>
+     </div>
+     <div class="box-2">
+       <p class= "font-boxes1">Equipes</p>
+       <mat-icon class="icons1">how_to_reg</mat-icon>     
+   </div>
+     
+   </section>
+ </div>
+ 
+ 
+ 
