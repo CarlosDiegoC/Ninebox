@@ -39,8 +39,8 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   logout() {
     this.authService.logoutRedirect({
-      //postLogoutRedirectUri: 'https://appnineboxhermesdev.azurewebsites.net'
-      postLogoutRedirectUri: 'http://localhost:4200'
+      postLogoutRedirectUri: 'https://appnineboxhermesdev.azurewebsites.net'
+      //postLogoutRedirectUri: 'http://localhost:4200'
     });
   }
 

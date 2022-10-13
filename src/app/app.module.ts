@@ -37,11 +37,11 @@ const isIE = window.navigator.userAgent.indexOf('MSIE ') > -1 || window.navigato
     HttpClientModule,
     MsalModule.forRoot( new PublicClientApplication({
       auth: {
-        //clientId: '8041545d-1c84-4b1b-9ff3-39b0e8076cf2',
-        clientId: 'a926a8c7-7c5d-4b83-8338-a4f959cda769',
+        clientId: '8041545d-1c84-4b1b-9ff3-39b0e8076cf2',
+        //clientId: 'a926a8c7-7c5d-4b83-8338-a4f959cda769',
         authority: 'https://login.microsoftonline.com/d28ce3ba-a6d5-4bd9-8718-290cb947a6c4',
-        redirectUri: 'http://localhost:4200',
-        //redirectUri: 'https://appnineboxhermesdev.azurewebsites.net/'
+        //redirectUri: 'http://localhost:4200',
+        redirectUri: 'https://appnineboxhermesdev.azurewebsites.net/'
       },
       cache: {
         cacheLocation: 'localStorage',
