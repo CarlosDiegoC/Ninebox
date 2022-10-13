@@ -3,16 +3,13 @@ import { MSAL_GUARD_CONFIG, MsalGuardConfiguration, MsalBroadcastService, MsalSe
 import { InteractionStatus, RedirectRequest } from '@azure/msal-browser';
 import { Subject, filter, takeUntil } from 'rxjs';
 
-
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
 
-
 export class HeaderComponent implements OnInit, OnDestroy {
-  title = '9Box';
   isIframe = false;
   loginDisplay = false;
   private readonly _destroying$ = new Subject<void>();
@@ -40,8 +37,9 @@ export class HeaderComponent implements OnInit, OnDestroy {
     }
   }
 
-  logout() { // Add log out function here
+  logout() {
     this.authService.logoutRedirect({
+      //postLogoutRedirectUri: 'https://appnineboxhermesdev.azurewebsites.net'
       postLogoutRedirectUri: 'http://localhost:4200'
     });
   }
