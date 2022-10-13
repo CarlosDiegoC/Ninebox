@@ -57,7 +57,8 @@ const isIE = window.navigator.userAgent.indexOf('MSIE ') > -1 || window.navigato
       interactionType: InteractionType.Redirect,
       protectedResourceMap: new Map([
         ['https://graph.microsoft.com/v1.0/me', ['user.read']],
-        ['https://apim-shoescompany-0001.azure-api.net/census/api/Census', null],
+        ['https://apim-shoescompany-0001.azure-api.net/**', null],
+        //['api://8041545d-1c84-4b1b-9ff3-39b0e8076cf2/product.read']
       ])
     })
   ],
