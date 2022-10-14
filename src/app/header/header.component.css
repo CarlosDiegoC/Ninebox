@@ -16,7 +16,15 @@
   top:20px;
   font-size: 28px
 }
-
+.toobar__login{
+  position: fixed;
+  display: flex;
+  right: 100px;
+  top:20px;
+  font-size: 30px;
+  width: auto;
+  height: auto;
+}
 
 
 .valign-center {

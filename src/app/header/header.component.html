@@ -4,8 +4,10 @@
     <a class="toolbar__logo" routerLink="">
         <img class="toolbar__imagem" src="/assets/logogft.jpg" alt="">
     </a>
-        
-    <button  mat-raised-button *ngIf="!loginDisplay" (click)="login()">Login</button>
+    
+    <button *ngIf="!loginDisplay" mat-icon-button (click)="login()">
+        <mat-icon class="toobar__login">login</mat-icon> 
+    </button>
     
     <button *ngIf="loginDisplay" mat-icon-button (click)="logout()">
         <mat-icon class="toobar__logout">logout</mat-icon> 
