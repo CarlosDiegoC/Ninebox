@@ -48,7 +48,7 @@ a:hover, a:active {
   list-style: none;
 }
 
-mat-toolbar {
+.mat-toolbar {
   position: sticky;
   position: -webkit-sticky;
   top: 0px;
