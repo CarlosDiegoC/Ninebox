@@ -149,4 +149,10 @@ body {
 
 }
 
-
+.welcome{
+  text-align: center;
+  font-family: Arial;
+  font-size: 60px;
+  padding-bottom: 20%;
+  color: #F2F2F2;
+}
