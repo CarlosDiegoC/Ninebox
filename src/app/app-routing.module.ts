@@ -5,7 +5,6 @@ import { ProfileComponent } from './profile/profile.component';
 import { MsalGuard } from '@azure/msal-angular';
 import { RoleGuardService } from './role-guard.service';
 
-
 const routes: Routes = [
   {
     path: 'profile',
