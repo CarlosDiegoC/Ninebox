@@ -1,10 +1,9 @@
-
- <app-header></app-header>
- <div class= "container-0" *ngIf="!loginDisplay">
-  <img  class= 'imagem-mascote' src="/assets/mascote 2.png" alt="">
-   <section class="flex-0">
-     <div class="box-0">
-      <a class='router' >
+<app-header></app-header>
+<div class="container-0" *ngIf="!loginDisplay">
+  <img class='imagem-mascote' src="/assets/mascote 2.png" alt="">
+  <section class="flex-0">
+    <div class="box-0">
+      <a class='router'>
         <p class="font-box">9Box</p>
       </a>
      </div>  
@@ -35,46 +34,43 @@
         <p class= "font-boxes1">Avaliações</p> 
         <mat-icon class="icons1">thumb_up</mat-icon>
       </a>
-       
-     </div>
-     <div class="box-2">
-      <a class= 'router' routerLink="">
-        <p class= "font-boxes1">Perfil</p> 
+
+    </div>
+    <div class="box-2">
+      <a class='router' routerLink="">
+        <p class="font-boxes1">Perfil</p>
         <mat-icon class="icons1">perm_identity</mat-icon>
       </a>
-        
-     </div> 
-     <div class="box-2">
-      <a class= 'router' routerLink="">
-        <p class= "font-boxes1">Habilidades</p>
+
+    </div>
+    <div class="box-2">
+      <a class='router' routerLink="">
+        <p class="font-boxes1">Habilidades</p>
         <mat-icon class="icons1">trending_up</mat-icon>
       </a>
-         
-     </div>
-     <div class="box-2">
-      <a class= 'router' routerLink="">
-        <p class= "font-boxes1">Competências</p>
-        <mat-icon  class="icons1">star_border</mat-icon>
-      </a>
-        
-     </div>
-     <div class="box-2">
-        <a class= 'router' routerLink="">
-          <p class= "font-boxes1">Equipes</p>
-          <mat-icon class="icons1">how_to_reg</mat-icon>  
-        </a>
-      </div>
 
-      <div *ngIf="isAdmin()" class="box-2" >
-        <a class= 'router'[routerLink]="['profile']">
-          <p class= "font-boxes1">Configurações</p>
-          <mat-icon class="icons1">settings</mat-icon> 
-        </a>
-      </div>
-    
-   
-   </section>
- </div>
- 
- 
- 
+    </div>
+    <div class="box-2">
+      <a class='router' routerLink="">
+        <p class="font-boxes1">Competências</p>
+        <mat-icon class="icons1">star_border</mat-icon>
+      </a>
+
+    </div>
+    <div class="box-2">
+      <a class='router' routerLink="">
+        <p class="font-boxes1">Equipes</p>
+        <mat-icon class="icons1">how_to_reg</mat-icon>
+      </a>
+    </div>
+
+    <div *ngIf="isAdmin()" class="box-2">
+      <a class='router' [routerLink]="['profile']">
+        <p class="font-boxes1">Configurações</p>
+        <mat-icon class="icons1">settings</mat-icon>
+      </a>
+    </div>
+  </section>
+</div>
+
+
