@@ -1,18 +1,16 @@
-<app-header></app-header>
-<div class="container-0" *ngIf="!loginDisplay">
-  <img class='imagem-mascote' src="/assets/mascote 2.png" alt="">
-  <section class="flex-0">
-    <div class="box-0">
-      <a class='router'>
+
+ <app-header></app-header>
+ <div class= "container-0" *ngIf="!loginDisplay">
+  <img  class= 'imagem-mascote' src="/assets/mascote 2.png" alt="">
+   <section class="flex-0">
+    <p class="welcome">Bem Vindo</p>
+     <div class="box-0">
+      <a class='router' >
         <p class="font-box">9Box</p>
       </a>
      </div>  
-     
    </section>
  </div>
- 
- <router-outlet></router-outlet>
- 
  
  <div class=" container" *ngIf="loginDisplay">
    <section class="flex">
